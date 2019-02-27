@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 use Tien\ThinkTools\exceptions\Exception;
 use Tien\ThinkTools\Status;
 
-class TestStatus extends TestCase
+class StatusTest extends TestCase
 {
 
     public function getStatusObj($response, $method = '')

@@ -10,10 +10,10 @@ namespace Tien\ThinkTools\Tests;
 
 
 use PHPUnit\Framework\TestCase;
-use Tien\ThinkTools\exceptions\TypeStrError;
+use Tien\ThinkTools\exceptions\TypeStrException;
 use Tien\ThinkTools\StringTool;
 
-class TestStringTool extends TestCase
+class StringToolTest extends TestCase
 {
 
 
@@ -88,7 +88,7 @@ class TestStringTool extends TestCase
     {
         $str = [];
 
-        $this->expectException(TypeStrError::class);
+        $this->expectException(TypeStrException::class);
 
         $this->expectExceptionMessage('$str: 应该是字符串');
 
@@ -120,7 +120,7 @@ class TestStringTool extends TestCase
     public function testUpperToLowerWithThrow()
     {
         $str = [];
-        $this->expectException(TypeStrError::class);
+        $this->expectException(TypeStrException::class);
 
         $this->expectExceptionMessage('$str: 应该是字符串');
         StringTool::upperToLower($str);

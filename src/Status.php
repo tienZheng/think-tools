@@ -9,7 +9,7 @@
 namespace Tien\ThinkTools;
 
 use Tien\ThinkTools\exceptions\Exception;
-use Tien\ThinkTools\exceptions\TypeStrError;
+use Tien\ThinkTools\exceptions\TypeStrException;
 
 class Status
 {
@@ -244,7 +244,7 @@ class Status
     {
         $this->response = $response;
         if (!is_string($method)) {
-            throw new TypeStrError('$method');
+            throw new TypeStrException('$method');
         }
         $this->method   = $method;
     }
@@ -279,12 +279,12 @@ class Status
      * :插入左方的信息
      *
      * @param string $info
-     * @throws TypeStrError
+     * @throws TypeStrException
      */
     public function injectLeftMsg($info = '')
     {
         if (!is_string($info)) {
-            throw new TypeStrError('$info');
+            throw new TypeStrException('$info');
         }
         $this->injectedInfo = $info . ',';
         $this->injectedType = -1;
@@ -294,12 +294,12 @@ class Status
      * :插入右方的信息
      *
      * @param string $info
-     * @throws TypeStrError
+     * @throws TypeStrException
      */
     public function injectRightMsg($info = '')
     {
         if (!is_string($info)) {
-            throw new TypeStrError('$info');
+            throw new TypeStrException('$info');
         }
         $this->injectedInfo = ',' . $info;
         $this->injectedType = 1;
@@ -309,12 +309,12 @@ class Status
      * :插入覆盖信息
      *
      * @param string $info
-     * @throws TypeStrError
+     * @throws TypeStrException
      */
     public function injectCoverMsg($info = '')
     {
         if (!is_string($info)) {
-            throw new TypeStrError('$info');
+            throw new TypeStrException('$info');
         }
         $this->injectedInfo = $info;
         $this->injectedType = 0;

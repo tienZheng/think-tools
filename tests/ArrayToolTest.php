@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 use Tien\ThinkTools\ArrayTool;
 use Tien\ThinkTools\StringTool;
 
-class TestArrayTool extends TestCase
+class ArrayToolTest extends TestCase
 {
 
     public function testFormatKey()
@@ -84,6 +84,23 @@ class TestArrayTool extends TestCase
 
         $this->assertSame($except_1, $actual);
         $this->assertSame($except_2, $arr);
+    }
+
+
+    public function testGetValue()
+    {
+        $arr = [
+            'include' => 'user,product',
+        ];
+
+        $except = ['user', 'product'];
+        $next   = function ($value) {
+            return explode(',', $value);
+        };
+        $actual = ArrayTool::getValue($arr, 'include', $next);
+
+        $this->assertSame($except, $actual);
+
     }
 
 }

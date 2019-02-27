@@ -9,7 +9,7 @@
 namespace Tien\ThinkTools;
 
 
-use Tien\ThinkTools\exceptions\TypeStrError;
+use Tien\ThinkTools\exceptions\TypeStrException;
 
 class StringTool
 {
@@ -52,12 +52,12 @@ class StringTool
      * @param $str
      * @param $type
      * @return string
-     * @throws TypeStrError
+     * @throws TypeStrException
      */
     public static function lowerToUpper($str, $type = '_')
     {
         if (!is_string($str)) {
-            throw new TypeStrError('$str');
+            throw new TypeStrException('$str');
         }
 
         $strArr = str_split($str);
@@ -78,12 +78,12 @@ class StringTool
      * @param $str
      * @param string $type
      * @return string
-     * @throws TypeStrError
+     * @throws TypeStrException
      */
     public static function upperToLower($str, $type = '_')
     {
         if (!is_string($str)) {
-            throw new TypeStrError('$str');
+            throw new TypeStrException('$str');
         }
 
         $strArr = str_split($str);

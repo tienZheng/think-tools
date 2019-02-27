@@ -11,7 +11,7 @@ namespace Tien\ThinkTools\exceptions;
 
 use Throwable;
 
-class TypeStrError extends Exception
+class TypeStrException extends Exception
 {
     public function __construct($message = "", $code = 0, Throwable $previous = null)
     {

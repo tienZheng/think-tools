@@ -57,5 +57,22 @@ class ArrayTool
     }
 
 
+    /**
+     * :获取数组中的某个值，该值是回掉处理过的
+     *
+     * @param array $arr
+     * @param $key
+     * @param Closure $next
+     * @return array
+     */
+    public static function getValue(array $arr, $key, Closure $next)
+    {
+        $value = isset($arr[$key]) ? $arr[$key] : [];
+        if (empty($value)) {
+            return [];
+        }
+        return $next($value);
+    }
+
 
 }

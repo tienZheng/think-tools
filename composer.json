@@ -1,0 +1,20 @@
+{
+    "name": "tien\/think-tools",
+    "description": "ThinkPhp5 常用工具",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tienZheng",
+            "email": "913346548@qq.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tien\\ThinkTools\\": "src"
+        }
+    }
+}

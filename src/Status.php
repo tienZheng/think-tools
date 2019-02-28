@@ -242,11 +242,8 @@ class Status
 
     public function __construct($response = '', $method = '')
     {
-        $this->response = $response;
-        if (!is_string($method)) {
-            throw new TypeStrException('$method');
-        }
-        $this->method   = $method;
+        $this->setMethod($response);
+        $this->setMethod($method);
     }
 
     /**
@@ -263,9 +260,13 @@ class Status
      * :
      *
      * @param $method
+     * @throws TypeStrException
      */
     public function setMethod($method)
     {
+        if (!is_string($method)) {
+            throw new TypeStrException('$method');
+        }
         $this->method = $method;
     }
 

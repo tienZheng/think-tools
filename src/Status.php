@@ -240,13 +240,33 @@ class Status
     protected $switchSuccess = true;
 
 
-    public function __construct($response, $method = '')
+    public function __construct($response = '', $method = '')
     {
         $this->response = $response;
         if (!is_string($method)) {
             throw new TypeStrException('$method');
         }
         $this->method   = $method;
+    }
+
+    /**
+     * :
+     *
+     * @param $response
+     */
+    public function setResponse($response)
+    {
+        $this->response = $response;
+    }
+
+    /**
+     * :
+     *
+     * @param $method
+     */
+    public function setMethod($method)
+    {
+        $this->method = $method;
     }
 
     /**

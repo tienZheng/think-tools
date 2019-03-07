@@ -9,8 +9,18 @@
         }
     ],
     "require": {
-        "phpunit/phpunit": "^8.0",
-        "mockery/mockery": "^1.2"
+        "phpunit/phpunit": "6.5.14",
+        "mockery/mockery": "^1.2",
+        "sebastian/resource-operations": "^1.0",
+        "sebastian/global-state": "^2.0",
+        "sebastian/environment": "^3.1",
+        "phpunit/php-code-coverage": "5.3.0",
+        "sebastian/diff": "2.0.1",
+        "phpunit/php-file-iterator": "^1.4.2",
+        "phpunit/php-token-stream": "^2.0.1",
+        "sebastian/comparator": "^2.1",
+        "phpunit/php-timer": "^1.0.9",
+        "phar-io/version": "^1.0"
     },
     "autoload": {
         "psr-4": {

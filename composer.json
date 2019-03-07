@@ -14,7 +14,7 @@
         "sebastian/resource-operations": "^1.0",
         "sebastian/global-state": "^2.0",
         "sebastian/environment": "^3.1",
-        "phpunit/php-code-coverage": "5.3.0",
+        "phpunit/php-code-coverage": "5.3.2",
         "sebastian/diff": "2.0.1",
         "phpunit/php-file-iterator": "^1.4.2",
         "phpunit/php-token-stream": "^2.0.1",
